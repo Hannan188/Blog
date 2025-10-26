@@ -1,16 +1,48 @@
-# React + Vite
+# Full-Stack Blog App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack blogging application built with **React** and **Appwrite**. Users can create, edit, delete, and view posts with rich text content and featured images.
 
-Currently, two official plugins are available:
+## Features
+- User authentication (sign up, login, logout) via Appwrite
+- Create, edit, delete posts
+- Upload and preview featured images
+- TinyMCE rich text editor for content
+- Responsive UI with Tailwind CSS
+- CRUD operations integrated with Appwrite Database & Storage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- Frontend: React, Tailwind CSS
+- Backend & Storage: Appwrite
+- Rich Text Editor: TinyMCE
+- State Management: Redux
+- Routing: React Router
 
-## React Compiler
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone <your-repo-url>
+Install dependencies:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+ 2. bash
+Copy code
+npm install
+3. Configure Appwrite in conf/conf.js:
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+export default {
+  appwriteUrl: "<YOUR_APPWRITE_ENDPOINT>",
+  appwriteProjectId: "<YOUR_PROJECT_ID>",
+  appwriteDatabaseId: "<DATABASE_ID>",
+  appwriteCollectionId: "<COLLECTION_ID>",
+  appwriteBucketId: "<BUCKET_ID>",
+};
+4. Start the development server:
+
+
+npm run dev
+5. Usage
+Navigate to Home to view all posts
+
+Add Post to create a new post with image and rich text
+
+Edit/Delete posts if you are the author
